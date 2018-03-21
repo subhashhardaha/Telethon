@@ -2,12 +2,11 @@ import abc
 import datetime
 import itertools
 import re
-import warnings
 
 from .. import utils
 from ..errors import RPCError
 from ..extensions import markdown
-from ..tl import TLObject, types, functions
+from ..tl import types, functions
 
 
 def _into_id_set(client, chats):
@@ -171,17 +170,6 @@ class _EventCommon(abc.ABC):
 
         return self._chat
 
-    def __str__(self):
-        return TLObject.pretty_format(self.to_dict())
-
-    def stringify(self):
-        return TLObject.pretty_format(self.to_dict(), indent=0)
-
-    def to_dict(self):
-        d = {k: v for k, v in self.__dict__.items() if k[0] != '_'}
-        d['_'] = self.__class__.__name__
-        return d
-
 
 class Raw(_EventBuilder):
     """
@@ -194,19 +182,9 @@ class Raw(_EventBuilder):
         return update
 
 
-def _name_inner_event(cls):
-    """Decorator to rename cls.Event 'Event' as 'cls.Event'"""
-    if hasattr(cls, 'Event'):
-        cls.Event.__name__ = '{}.Event'.format(cls.__name__)
-    else:
-        warnings.warn('Class {} does not have a inner Event'.format(cls))
-    return cls
-
-
 # Classes defined here are actually Event builders
 # for their inner Event classes. Inner ._client is
 # set later by the creator TelegramClient.
-@_name_inner_event
 class NewMessage(_EventBuilder):
     """
     Represents a new message event builder.
@@ -602,7 +580,6 @@ class NewMessage(_EventBuilder):
             return self.message.out
 
 
-@_name_inner_event
 class ChatAction(_EventBuilder):
     """
     Represents an action in a chat (such as user joined, left, or new pin).
@@ -907,7 +884,6 @@ class ChatAction(_EventBuilder):
             return self._input_users
 
 
-@_name_inner_event
 class UserUpdate(_EventBuilder):
     """
     Represents an user update (gone online, offline, joined Telegram).
@@ -1056,7 +1032,6 @@ class UserUpdate(_EventBuilder):
             return self.chat
 
 
-@_name_inner_event
 class MessageEdited(NewMessage):
     """
     Event fired when a message has been edited.
@@ -1072,7 +1047,6 @@ class MessageEdited(NewMessage):
         return self._message_filter_event(event)
 
 
-@_name_inner_event
 class MessageDeleted(_EventBuilder):
     """
     Event fired when one or more messages are deleted.
