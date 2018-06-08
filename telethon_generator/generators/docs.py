@@ -138,10 +138,11 @@ def _generate_index(folder, original_paths, root, bots_index=False):
 
         docs.write_title(_get_relative_path(folder, root, folder=True).title())
         if bots_index:
-            docs.write_text('The methods listed here are usable by bots. '
-                            'Click <a href="index.html">Here</a> to view all methods.')
+            docs.write_text('The methods listed here <strong>are usable by bots</strong>. '
+                            'View <strong>all</strong> methods over <a href="index.html">Here</a>.')
         else:
-            docs.write_text('Click <a href="botindex.html">Here</a> to view only the methods bots can use.')
+            docs.write_text('View only the methods <strong>bots</strong> '
+                            'can use over <a href="botindex.html">Here</a>.')
         if namespaces:
             docs.write_title('Namespaces', level=3)
             docs.begin_table(4)
