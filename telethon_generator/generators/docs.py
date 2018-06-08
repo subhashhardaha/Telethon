@@ -144,9 +144,9 @@ def _generate_index(folder, original_paths, root, bots_index=False):
             for namespace in namespaces:
                 # For every namespace, also write the index of it
                 _generate_index(os.path.join(folder, namespace),
-                                original_paths, root)
+                                original_paths, root, bots_index)
                 docs.add_row(namespace.title(),
-                             link=os.path.join(namespace, 'index.html'))
+                             link=os.path.join(namespace, 'index.html' if not bots_index else 'botindex.html'))
 
             docs.end_table()
 
