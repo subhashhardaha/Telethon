@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8fe551a6-52f2-475c-a188-0488ef741415" name="Default" comment="" />
+    <list default="true" id="8fe551a6-52f2-475c-a188-0488ef741415" name="Default" comment="fix last commit's docstring link">
+      <change beforePath="$PROJECT_DIR$/telethon_generator/generators/docs.py" beforeDir="false" afterPath="$PROJECT_DIR$/telethon_generator/generators/docs.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,48 +13,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="chataction.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/telethon/events/chataction.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="85" column="111" selection-start-line="85" selection-start-column="111" selection-end-line="85" selection-end-column="111" />
-              <folding>
-                <element signature="e#0#63#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="common.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/telethon/events/common.py">
+      <file leaf-file-name="docs_writer.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/telethon_generator/docs_writer.py">
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <folding>
-                <element signature="e#0#10#0" expanded="true" />
+                <element signature="e#0#9#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="messagedeleted.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/telethon/events/messagedeleted.py">
+      <file leaf-file-name="setup.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/setup.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#63#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="1938">
+              <caret line="110" column="16" selection-start-line="110" selection-start-column="16" selection-end-line="110" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="newmessage.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/telethon/events/newmessage.py">
+      <file leaf-file-name="docs.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/telethon_generator/generators/docs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7410">
-              <caret line="402" column="72" selection-start-line="402" selection-start-column="68" selection-end-line="402" selection-end-column="72" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="285">
+              <caret line="141" column="44" selection-start-line="141" selection-start-column="44" selection-end-line="141" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -67,18 +52,22 @@
       <find>userupdate</find>
       <find>messageedit</find>
       <find>messagedelete</find>
-      <find>def build(self, update):</find>
-      <find>def chat</find>
-      <find>def build</find>
+      <find />
+      <find />
+      <find />
       <find>new</find>
       <find>class</find>
       <find>extensions</find>
       <find>get_messages</find>
       <find>lonamiwebs.github.io</find>
       <find>action_message</find>
-      <find>Represents the event of a new chat action.</find>
-      <find>if there is a new pin</find>
+      <find />
+      <find />
       <find>test</find>
+      <find>gen</find>
+      <find>methods</find>
+      <find>print</find>
+      <find>bot_index</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -102,6 +91,7 @@
         <option value="$PROJECT_DIR$/readthedocs/extra/examples/chats-and-channels.rst" />
         <option value="$PROJECT_DIR$/readthedocs/extra/examples/working-with-messages.rst" />
         <option value="$PROJECT_DIR$/telethon/events/chataction.py" />
+        <option value="$PROJECT_DIR$/telethon_generator/generators/docs.py" />
       </list>
     </option>
   </component>
@@ -111,7 +101,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1612" />
@@ -122,7 +112,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -133,7 +122,18 @@
             <path>
               <item name="Telethon" type="b2602c69:ProjectViewProjectNode" />
               <item name="Telethon" type="462c0819:PsiDirectoryNode" />
-              <item name="readthedocs" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Telethon" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Telethon" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="methods" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Telethon" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Telethon" type="462c0819:PsiDirectoryNode" />
+              <item name="telethon" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Telethon" type="b2602c69:ProjectViewProjectNode" />
@@ -178,6 +178,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -306,19 +307,19 @@
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32974428" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5179949" side_tool="true" visible="true" weight="0.3293011" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5212082" side_tool="true" visible="true" weight="0.3293011" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49164525" weight="0.3293011" />
-      <window_info anchor="bottom" id="Python Console" order="7" sideWeight="0.4974293" weight="0.32974428" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.48200515" visible="true" weight="0.3293011" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27506426" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49100256" weight="0.3293011" />
+      <window_info anchor="bottom" id="Python Console" order="7" sideWeight="0.49550128" weight="0.3293011" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.47879177" visible="true" weight="0.3293011" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27892032" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -387,11 +388,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/telethon/events/chataction.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1615">
+        <state relative-caret-position="1577">
           <caret line="85" column="111" selection-start-line="85" selection-start-column="111" selection-end-line="85" selection-end-column="111" />
-          <folding>
-            <element signature="e#0#63#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -417,9 +415,38 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7410">
           <caret line="402" column="72" selection-start-line="402" selection-start-column="68" selection-end-line="402" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/telethon/events/chataction.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1615">
+          <caret line="85" column="111" selection-start-line="85" selection-start-column="111" selection-end-line="85" selection-end-column="111" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/telethon/events/common.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/telethon/events/messagedeleted.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/telethon/events/newmessage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7410">
+          <caret line="402" column="72" selection-start-line="402" selection-start-column="68" selection-end-line="402" selection-end-column="72" />
         </state>
       </provider>
     </entry>
@@ -450,9 +477,6 @@
           <caret line="159" column="23" lean-forward="true" selection-start-line="159" selection-start-column="23" selection-end-line="159" selection-end-column="23" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/telethon/tl/custom/dialog.py">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/readthedocs/conf.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -626,6 +650,20 @@
         <state relative-caret-position="-342" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/readthedocs/telethon.events.rst">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/telethon/events/chataction.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="88" column="29" selection-start-line="88" selection-start-column="29" selection-end-line="88" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/telethon/events/common.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -644,30 +682,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/readthedocs/telethon.events.rst">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/telethon/events/newmessage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7410">
-          <caret line="402" column="72" selection-start-line="402" selection-start-column="68" selection-end-line="402" selection-end-column="72" />
+        <state relative-caret-position="410">
+          <caret line="161" selection-start-line="161" selection-end-line="161" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/telethon_generator/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/telethon_generator/utils.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/telethon_generator/source_builder.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/telethon/tl/functions/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-285" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/methods/ping.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1938">
+          <caret line="110" column="16" selection-start-line="110" selection-start-column="16" selection-end-line="110" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/telethon_generator/docs_writer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
           <folding>
-            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/telethon/events/chataction.py">
+    <entry file="file://$PROJECT_DIR$/telethon_generator/generators/docs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="85" column="111" selection-start-line="85" selection-start-column="111" selection-end-line="85" selection-end-column="111" />
-          <folding>
-            <element signature="e#0#63#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="285">
+          <caret line="141" column="44" selection-start-line="141" selection-start-column="44" selection-end-line="141" selection-end-column="44" />
         </state>
       </provider>
     </entry>

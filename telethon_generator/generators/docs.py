@@ -138,7 +138,7 @@ def _generate_index(folder, original_paths, root, bots_index=False):
 
         docs.write_title(_get_relative_path(folder, root, folder=True).title())
         if bots_index:
-            docs.write_text('These are the methods that you can use a bot. '
+            docs.write_text('These are the methods that you can use as a bot. '
                             'Click <a href="index.html">here</a> to view them all.')
         else:
             docs.write_text('Click <a href="botindex.html">here</a> to view the methods that you can use as a bot.')
