@@ -166,6 +166,7 @@ def _generate_index(folder, original_paths, root, bots_index=False, bots_index_p
                     for item in bots_index_paths:
                         if os.path.dirname(item) == namespace:
                             namespace_paths.append(os.path.basename(item))
+                print('Bots_index: {} // Namespace: {}'.format(bots_index, namespace))
                 print('Namespace_paths: {}'.format(namespace_paths))
                 _generate_index(os.path.join(folder, namespace),
                                 original_paths, root, bots_index, namespace_paths)
