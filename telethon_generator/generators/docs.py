@@ -109,7 +109,7 @@ def _generate_index(folder, original_paths, root, bots_index=False, bots_index_p
         for item in os.listdir(folder):
             if os.path.isdir(os.path.join(folder, item)):
                 namespaces.append(item)
-            elif item != INDEX:
+            elif item not in (INDEX, BOT_INDEX):
                 files.append(item)
     else:
         # bots_index_paths should be a list of "namespace\method.html"
@@ -118,14 +118,14 @@ def _generate_index(folder, original_paths, root, bots_index=False, bots_index_p
             dirname = os.path.dirname(item)
             if dirname != '' and dirname not in namespaces:
                 namespaces.append(dirname)
-            elif dirname == '' and item != BOT_INDEX:
+            elif dirname == '' and item not in (INDEX, BOT_INDEX):
                 files.append(item)
 
     paths = {k: _get_relative_path(v, folder, folder=True)
              for k, v in original_paths.items()}
 
     # Now that everything is setup, write the index.html file
-    filename = os.path.join(folder, BOT_INDEX if not bots_index else INDEX)
+    filename = os.path.join(folder, BOT_INDEX if bots_index else INDEX)
 
     with DocsWriter(filename, type_to_path=_get_path_for_type) as docs:
         # Title should be the current folder name
@@ -140,10 +140,10 @@ def _generate_index(folder, original_paths, root, bots_index=False, bots_index_p
         docs.write_title(_get_relative_path(folder, root, folder=True).title())
         if bots_index:
             docs.write_text('These are the methods that you can use as a bot. '
-                            'Click <a href="{}">here</a> to view them all.'.format(BOT_INDEX))
+                            'Click <a href="{}">here</a> to view them all.'.format(INDEX))
         else:
             docs.write_text('Click <a href="{}">here</a> to view the methods '
-                            'that you can use as a bot.'.format(INDEX))
+                            'that you can use as a bot.'.format(BOT_INDEX))
         if namespaces:
             docs.write_title('Namespaces', level=3)
             docs.begin_table(4)
