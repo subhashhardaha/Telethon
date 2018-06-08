@@ -16,8 +16,8 @@
       <file leaf-file-name="docs.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/telethon_generator/generators/docs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="168" column="84" selection-start-line="168" selection-start-column="84" selection-end-line="168" selection-end-column="84" />
+            <state relative-caret-position="226">
+              <caret line="156" column="44" selection-start-line="156" selection-start-column="44" selection-end-line="156" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -119,6 +119,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -159,8 +160,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/telethon_generator/generators/docs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="168" column="84" selection-start-line="168" selection-start-column="84" selection-end-line="168" selection-end-column="84" />
+        <state relative-caret-position="226">
+          <caret line="156" column="44" selection-start-line="156" selection-start-column="44" selection-end-line="156" selection-end-column="44" />
         </state>
       </provider>
     </entry>

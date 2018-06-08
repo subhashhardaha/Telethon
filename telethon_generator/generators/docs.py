@@ -77,17 +77,6 @@ def _find_title(html_file):
     return '(Unknown)'
 
 
-def _find_if_bot_can_use(html_file):
-    """Finds if this method can be used by bots."""
-    with open(html_file) as fp:
-        for line in fp:
-            if "<strong>can't</strong>" in line:
-                return False
-            elif "<strong>can</strong>" in line:
-                return True
-    return False
-
-
 def _build_menu(docs, filename, root, relative_main_index):
     """Builds the menu using the given DocumentWriter up to 'filename',
        which must be a file (it cannot be a directory)"""
@@ -107,18 +96,20 @@ def _build_menu(docs, filename, root, relative_main_index):
     docs.end_menu()
 
 
-def _generate_index(folder, original_paths, root, bots_index=False, bots_index_paths=[]):
+def _generate_index(folder, original_paths, root, bots_index=False, bots_index_paths=list()):
     """Generates the index file for the specified folder"""
     # Determine the namespaces listed here (as sub folders)
     # and the files (.html files) that we should link to
     namespaces = []
     files = []
+    INDEX = 'index.html'
+    BOT_INDEX = 'botindex.html'
 
     if not bots_index:
         for item in os.listdir(folder):
             if os.path.isdir(os.path.join(folder, item)):
                 namespaces.append(item)
-            elif item != 'index.html':
+            elif item != INDEX:
                 files.append(item)
     else:
         # bots_index_paths should be a list of "namespace\method.html"
@@ -127,17 +118,14 @@ def _generate_index(folder, original_paths, root, bots_index=False, bots_index_p
             dirname = os.path.dirname(item)
             if dirname != '' and dirname not in namespaces:
                 namespaces.append(dirname)
-            elif dirname == '':
+            elif dirname == '' and item != BOT_INDEX:
                 files.append(item)
 
     paths = {k: _get_relative_path(v, folder, folder=True)
              for k, v in original_paths.items()}
 
     # Now that everything is setup, write the index.html file
-    if not bots_index:
-        filename = os.path.join(folder, 'botindex.html')
-    else:
-        filename = os.path.join(folder, 'index.html')
+    filename = os.path.join(folder, BOT_INDEX if not bots_index else INDEX)
 
     with DocsWriter(filename, type_to_path=_get_path_for_type) as docs:
         # Title should be the current folder name
@@ -152,9 +140,10 @@ def _generate_index(folder, original_paths, root, bots_index=False, bots_index_p
         docs.write_title(_get_relative_path(folder, root, folder=True).title())
         if bots_index:
             docs.write_text('These are the methods that you can use as a bot. '
-                            'Click <a href="index.html">here</a> to view them all.')
+                            'Click <a href="{}">here</a> to view them all.'.format(BOT_INDEX))
         else:
-            docs.write_text('Click <a href="botindex.html">here</a> to view the methods that you can use as a bot.')
+            docs.write_text('Click <a href="{}">here</a> to view the methods '
+                            'that you can use as a bot.'.format(INDEX))
         if namespaces:
             docs.write_title('Namespaces', level=3)
             docs.begin_table(4)
@@ -166,12 +155,11 @@ def _generate_index(folder, original_paths, root, bots_index=False, bots_index_p
                     for item in bots_index_paths:
                         if os.path.dirname(item) == namespace:
                             namespace_paths.append(os.path.basename(item))
-                print('Bots_index: {} // Namespace: {}'.format(bots_index, namespace))
-                print('Namespace_paths: {}'.format(namespace_paths))
                 _generate_index(os.path.join(folder, namespace),
                                 original_paths, root, bots_index, namespace_paths)
                 docs.add_row(namespace.title(),
-                             link=os.path.join(namespace, 'index.html' if not bots_index else 'botindex.html'))
+                             link=os.path.join(namespace,
+                                               INDEX if not bots_index else BOT_INDEX))
 
             docs.end_table()
 
