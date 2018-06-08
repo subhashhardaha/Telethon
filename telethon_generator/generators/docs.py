@@ -134,11 +134,14 @@ def _generate_index(folder, original_paths, root, bots_index=False):
 
         docs.set_menu_separator(paths['arrow'])
         _build_menu(docs, filename, root,
-                    relative_main_index=paths['index_all'] if not bots_index else paths['bot_index'])
+                    relative_main_index=paths['index_all'])
 
         docs.write_title(_get_relative_path(folder, root, folder=True).title())
         if bots_index:
-            docs.write_text('The methods listed here are usable by bots.')
+            docs.write_text('The methods listed here are usable by bots. '
+                            'Click <a href="index.html">Here</a> to view all methods.')
+        else:
+            docs.write_text('Click <a href="botindex.html">Here</a> to view only the methods bots can use.')
         if namespaces:
             docs.write_title('Namespaces', level=3)
             docs.begin_table(4)
