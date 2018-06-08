@@ -155,7 +155,7 @@ def _generate_index(folder, original_paths, root, bots_index=False):
         files.sort(key=lambda t: t[1])
 
         for file, title, if_bot_can_use in files:
-            if if_bot_can_use:
+            if not (bots_index and not if_bot_can_use):
                 docs.add_row(title, link=file)
 
         docs.end_table()
