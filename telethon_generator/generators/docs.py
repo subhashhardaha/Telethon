@@ -137,6 +137,8 @@ def _generate_index(folder, original_paths, root, bots_index=False):
                     relative_main_index=paths['index_all'])
 
         docs.write_title(_get_relative_path(folder, root, folder=True).title())
+        if bots_index:
+            docs.write_text('The methods listed here are usable by bots.')
         if namespaces:
             docs.write_title('Namespaces', level=3)
             docs.begin_table(4)
