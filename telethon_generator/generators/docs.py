@@ -124,6 +124,7 @@ def _generate_index(folder, original_paths, root, bots_index=False):
 
     # Now that everything is setup, write the index.html file
     filename = os.path.join(folder, 'index.html') if not bots_index else os.path.join(folder, 'botindex.html')
+    print(bots_index, filename)
     with DocsWriter(filename, type_to_path=_get_path_for_type) as docs:
         # Title should be the current folder name
         docs.write_head(folder.title(),
