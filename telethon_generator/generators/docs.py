@@ -82,9 +82,9 @@ def _find_if_bot_can_use(html_file):
     with open(html_file) as fp:
         for line in fp:
             if "<strong>can't</strong>" in line:
-                return True
-            elif "<strong>can</strong>" in line:
                 return False
+            elif "<strong>can</strong>" in line:
+                return True
     return False
 
 
