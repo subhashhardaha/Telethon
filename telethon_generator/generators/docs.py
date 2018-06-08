@@ -134,7 +134,7 @@ def _generate_index(folder, original_paths, root, bots_index=False):
 
         docs.set_menu_separator(paths['arrow'])
         _build_menu(docs, filename, root,
-                    relative_main_index=paths['index_all'])
+                    relative_main_index=paths['index_all'] if not bots_index else paths['bot_index'])
 
         docs.write_title(_get_relative_path(folder, root, folder=True).title())
         if bots_index:
@@ -237,6 +237,7 @@ def _write_html_pages(tlobjects, errors, layer, input_res, output_dir):
         'search.js': 'js/search.js',
         '404': '404.html',
         'index_all': 'index.html',
+        'bot_index': 'botindex.html',
         'index_types': 'types/index.html',
         'index_methods': 'methods/index.html',
         'index_constructors': 'constructors/index.html'
