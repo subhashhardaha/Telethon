@@ -84,6 +84,7 @@ def _find_if_bot_can_use(html_file):
             if "<strong>can't</strong>" in line:
                 return False
             elif "<strong>can</strong>" in line:
+                print("Bot Can Use: {}".format(html_file))
                 return True
     return False
 
@@ -124,7 +125,7 @@ def _generate_index(folder, original_paths, root, bots_index=False):
 
     # Now that everything is setup, write the index.html file
     filename = os.path.join(folder, 'index.html') if not bots_index else os.path.join(folder, 'botindex.html')
-    print(bots_index, filename)
+
     with DocsWriter(filename, type_to_path=_get_path_for_type) as docs:
         # Title should be the current folder name
         docs.write_head(folder.title(),
@@ -152,12 +153,20 @@ def _generate_index(folder, original_paths, root, bots_index=False):
         docs.write_title('Available items')
         docs.begin_table(2)
 
-        files = [(f, _find_title(os.path.join(folder, f)), _find_if_bot_can_use(os.path.join(folder, f))) for f in files]
-        files.sort(key=lambda t: t[1])
+        if bots_index:
+            files = [(f, _find_title(os.path.join(folder, f)), _find_if_bot_can_use(os.path.join(folder, f))) for f in files]
+            files.sort(key=lambda t: t[1])
 
-        for file, title, if_bot_can_use in files:
-            if not (bots_index and not if_bot_can_use):
+            for file, title, if_bot_can_use in files:
+                if if_bot_can_use:
+                    docs.add_row(title, link=file)
+        else:
+            files = [(f, _find_title(os.path.join(folder, f))) for f in files]
+            files.sort(key=lambda t: t[1])
+
+            for file, title in files:
                 docs.add_row(title, link=file)
+
 
         docs.end_table()
         docs.end_body()
