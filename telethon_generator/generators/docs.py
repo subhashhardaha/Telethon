@@ -167,7 +167,6 @@ def _generate_index(folder, original_paths, root, bots_index=False):
             for file, title in files:
                 docs.add_row(title, link=file)
 
-
         docs.end_table()
         docs.end_body()
 
