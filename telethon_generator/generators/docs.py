@@ -84,7 +84,6 @@ def _find_if_bot_can_use(html_file):
             if "<strong>can't</strong>" in line:
                 return False
             elif "<strong>can</strong>" in line:
-                print("Bot Can Use: {}".format(html_file))
                 return True
     return False
 
