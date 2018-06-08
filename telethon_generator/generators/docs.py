@@ -126,7 +126,7 @@ def _generate_index(folder, original_paths, root, bots_index=False, bots_index_p
         for item in bots_index_paths:
             dirname = os.path.dirname(item)
             if dirname != '' and dirname not in namespaces:
-                namespaces.append(item)
+                namespaces.append(dirname)
             elif dirname == '':
                 files.append(item)
 

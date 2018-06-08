@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b18977d0-35e3-4124-8749-7b12b736908c" name="Default" comment="" />
+    <list default="true" id="b18977d0-35e3-4124-8749-7b12b736908c" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/telethon_generator/generators/docs.py" beforeDir="false" afterPath="$PROJECT_DIR$/telethon_generator/generators/docs.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,8 +16,8 @@
       <file leaf-file-name="docs.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/telethon_generator/generators/docs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-185">
-              <caret line="141" column="14" selection-start-line="141" selection-start-column="14" selection-end-line="141" selection-end-column="14" />
+            <state relative-caret-position="385">
+              <caret line="168" column="84" selection-start-line="168" selection-start-column="84" selection-end-line="168" selection-end-column="84" />
             </state>
           </provider>
         </entry>
@@ -117,7 +119,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -158,8 +159,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/telethon_generator/generators/docs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-185">
-          <caret line="141" column="14" selection-start-line="141" selection-start-column="14" selection-end-line="141" selection-end-column="14" />
+        <state relative-caret-position="385">
+          <caret line="168" column="84" selection-start-line="168" selection-start-column="84" selection-end-line="168" selection-end-column="84" />
         </state>
       </provider>
     </entry>
