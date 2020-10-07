@@ -166,14 +166,14 @@ Giving or revoking admin permissions can be done with the :tl:`EditAdminRequest`
     .. code-block:: python
 
         from telethon.tl.functions.channels import EditAdminRequest
-        from telethon.tl.types import ChannelAdminRights
+        from telethon.tl.types import ChatAdminRights
 
         # You need both the channel and who to grant permissions
         # They can either be channel/user or input channel/input user.
         #
-        # ChannelAdminRights is a list of granted permissions.
+        # ChatAdminRights is a list of granted permissions.
         # Set to True those you want to give.
-        rights = ChannelAdminRights(
+        rights = ChatAdminRights(
             post_messages=None,
             add_admins=None,
             invite_users=None,
@@ -185,14 +185,14 @@ Giving or revoking admin permissions can be done with the :tl:`EditAdminRequest`
             edit_messages=None
         ) 
         # Equivalent to:
-        #     rights = ChannelAdminRights(
+        #     rights = ChatAdminRights(
         #         change_info=True,
         #         delete_messages=True,
         #         pin_messages=True
         #     )
 
-        # Once you have a ChannelAdminRights, invoke it
-        client(EditAdminRequest(channel, user, rights))
+        # Once you have a ChatAdminRights, invoke it
+        client(EditAdminRequest(channel, user, rights,rank="str"))
 
         # User will now be able to change group info, delete other people's
         # messages and pin messages.
